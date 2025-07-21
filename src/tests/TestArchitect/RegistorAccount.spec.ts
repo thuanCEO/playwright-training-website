@@ -3,12 +3,17 @@ import { TestArchitectPage } from '../../pages/TestArchitect/ArchitectPages';
 import { LoginPage } from '../../pages/TestArchitect/LoginPage';
 import { saveScreenshot } from '../../utils/saveScreenshot';
 
-test.describe('@Smoke @LoginTA', () => {
+test.describe('@Smoke @Register', () => {
   test('Login - register with email', async ({ page }) => {
     const testArchitectPage = new TestArchitectPage(page);
+    await testArchitectPage.goto();
+    await testArchitectPage.closePopupIfVisible();
+    await testArchitectPage.clickLoginTA();
     const loginPage = new LoginPage(page);
-    await testArchitectPage.gotoAndClickLogin();
-    await loginPage.registerWithEmail();
+    const randomEmail = `user${Date.now()}@example.com`;
+    await loginPage.enterEmail(randomEmail);
+    await loginPage.clickRegister();
+    await page.waitForTimeout(10000);
     await saveScreenshot(page);
   });
 });

@@ -19,4 +19,10 @@ export class LoginPage {
   async clickRegister(): Promise<void> {
     await this.page.locator(Login.emailRegisterButton).click();
   }
+
+  async registerWithEmail(): Promise<void> {
+    const randomEmail = `user${Date.now()}@example.com`;
+    await this.enterEmail(randomEmail);
+    await this.clickRegister();
+  }
 }
