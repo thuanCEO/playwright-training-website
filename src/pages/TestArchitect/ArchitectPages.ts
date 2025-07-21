@@ -15,12 +15,16 @@ export class TestArchitectPage {
   }
 
   async closePopupIfVisible(): Promise<void> {
-    const popupCloseBtn = this.page.locator('.pum-close');
-    if (await popupCloseBtn.isVisible()) {
-      await popupCloseBtn.click();
+    const popupCloseBtns = this.page.locator('.pum-close');
+    const count = await popupCloseBtns.count();
+    for (let i = 0; i < count; i++) {
+      const button = popupCloseBtns.nth(i);
+      if (await button.isVisible()) {
+        await button.click();
+      }
     }
   }
-  
+
   async clickLoginTA(): Promise<void> {
     await this.page.locator(ArchitectLocators.loginTAButton).click();
   }
