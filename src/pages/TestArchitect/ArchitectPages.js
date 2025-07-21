@@ -2,6 +2,7 @@ import { Page } from '@playwright/test';
 import fs from 'fs';
 
 import { testArchitectUrl } from '../../utils/envConfig.js';
+import { ArchitectLocators } from '../../locators/TestArchitect/TestArchitectPage.locator.js';
 
 export class TestArchitectPage {
   page;
@@ -20,10 +21,13 @@ export class TestArchitectPage {
       await popupCloseBtn.click();
     }
   }
+  
+  async clickLoginTA() {
+    await this.page.locator(ArchitectLocators.loginTAButton).click();
+  }
 
   async clickAboutUs() {
-    await this.closePopupIfVisible();
-    await this.page.click('a[href="/about-us/"]');
+     await this.page.locator(ArchitectLocators.aboutUsLink).click();
   }
 
   async getTitle() {

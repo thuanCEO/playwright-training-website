@@ -7,6 +7,10 @@ export class LoginPage {
     this.page = page;
   }
 
+  async clickLoginTA() {
+    await this.page.locator(Login.loginTAButton).click();
+  }
+
   async enterEmail(email) {
     await this.page.locator(Login.emailAddressRegisterInput).fill(email);
   }
