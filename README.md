@@ -1,6 +1,12 @@
 # playwright-training-website
 A comprehensive platform for automated testing training with playwright
 
+# npm run test
+Run playwright test
+
+# npm playwright show-report
+Run playwright show-report
+
 # npm run start
 Run playwright test && playwright show-report
 

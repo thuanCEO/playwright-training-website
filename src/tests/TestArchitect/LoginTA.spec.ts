@@ -6,6 +6,7 @@ import { saveScreenshot } from '../../utils/saveScreenshot';
 test('@LoginTA Login - register with email', async ({ page }) => {
   const testArchitectPage = new TestArchitectPage(page);
   await testArchitectPage.goto();
+  await testArchitectPage.closePopupIfVisible();
   await testArchitectPage.clickAboutUs();
   await page.waitForTimeout(10000);
   await saveScreenshot(page);
