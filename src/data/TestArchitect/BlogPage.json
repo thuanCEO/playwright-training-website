@@ -1,0 +1,10 @@
+{
+    "BlogArchitect": {
+        "protectedTitleText": "Protected: Test here",
+        "protectedDetailsText": "There is no excerpt because this is a protected post."
+    },
+    "BlogArchitectDetails": {
+        "protectedTitleDetailsText": "PROTECTED: TEST HERE",
+        "protectedDetailsContent": "This content is password protected. To view it please enter your password below:"
+    }
+}
