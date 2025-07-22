@@ -2,6 +2,8 @@ import { Page } from '@playwright/test';
 import { testArchitectUrl } from '../../utils/envConfig';
 import { ArchitectLocators } from '../../locators/TestArchitect/TestArchitectPage.locator';
 import { ContactFormUs } from './ContactFormUs';
+import { ShopPage } from './ShopPage';
+import { BlogPage } from './BlogPage';
 
 export class TestArchitectPage {
   private page: Page;
@@ -33,8 +35,9 @@ export class TestArchitectPage {
     await this.page.locator(ArchitectLocators.aboutUsLink).click();
   }
 
-  async clickBlogTab(): Promise<void> {
+  async clickBlogTab(): Promise<BlogPage> {
     await this.page.locator(ArchitectLocators.blogTabLink).click();
+    return new BlogPage(this.page);
   }
 
   async clickContactUsTab(): Promise<ContactFormUs> {
@@ -46,8 +49,9 @@ export class TestArchitectPage {
     await this.page.locator(ArchitectLocators.offersTabLink).click();
   }
 
-  async clickShopTab(): Promise<void> {
+  async clickShopTab(): Promise<ShopPage> {
     await this.page.locator(ArchitectLocators.shopTabLink).click();
+    return new ShopPage(this.page);
   }
 
   async clickAboutTab(): Promise<void> {
