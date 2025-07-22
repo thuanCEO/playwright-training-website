@@ -1,6 +1,9 @@
 {
     "ContactUsArchitect": {
-        "protectedTitleText": "Protected: Test here",
-        "protectedDetailsText": "There is no excerpt because this is a protected post."
+        "contactFormTitleText": "Contact Form",
+        "contectDetailsText": "There are many variations of passages of brands available.",
+        "supportCenterText":"24 / Support Center",
+        "contactSendMessages": "Thank you for your message. It has been sent."
     }
 }
+													

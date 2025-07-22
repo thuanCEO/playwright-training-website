@@ -1,6 +1,7 @@
 import { Page } from '@playwright/test';
 import { testArchitectUrl } from '../../utils/envConfig';
 import { ArchitectLocators } from '../../locators/TestArchitect/TestArchitectPage.locator';
+import { ContactFormUs } from './ContactFormUs';
 
 export class TestArchitectPage {
   private page: Page;
@@ -36,8 +37,9 @@ export class TestArchitectPage {
     await this.page.locator(ArchitectLocators.blogTabLink).click();
   }
 
-  async clickContactUsTab(): Promise<void> {
+  async clickContactUsTab(): Promise<ContactFormUs> {
     await this.page.locator(ArchitectLocators.contactUsTabLink).click();
+    return new ContactFormUs(this.page);
   }
 
   async clickOffersTab(): Promise<void> {
