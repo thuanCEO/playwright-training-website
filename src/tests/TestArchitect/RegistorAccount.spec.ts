@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { TestArchitectPage } from '../../pages/TestArchitect/ArchitectPages';
 import { LoginPage } from '../../pages/TestArchitect/LoginPage';
-import { saveScreenshot } from '../../utils/saveScreenshot';
+import { SaveScreenshot } from '../../utils/saveScreenshot';
 
 test.describe('@Smoke @Register', () => {
   test('Login - register with email', async ({ page }) => {
@@ -14,7 +14,7 @@ test.describe('@Smoke @Register', () => {
     await loginPage.enterEmail(randomEmail);
     await loginPage.clickRegister();
     await page.waitForTimeout(10000);
-    await saveScreenshot(page);
+    await SaveScreenshot(page);
   });
 });
 

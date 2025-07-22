@@ -13,5 +13,8 @@ Run playwright test && playwright show-report
 # npm run test:report
 Run playwright test && playwright show-report
 
+# npx playwright test --grep @BlogData
+Run playwright test && playwright show-report @loginTA
+
 # npm run start -- src/tests/login.spec.js
 Run playwright test && playwright show-report with -- src/tests/login.spec.js

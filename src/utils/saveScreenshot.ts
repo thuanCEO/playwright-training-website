@@ -5,7 +5,7 @@ import path from 'path';
 /**
  * Lưu screenshot vào thư mục test-result/screenshot với tên file theo định dạng yyyymmdd hhmmsss.png
  */
-export async function saveScreenshot(page: Page): Promise<string> {
+export async function SaveScreenshot(page: Page): Promise<string> {
   const now = new Date();
   const pad = (n: number) => n.toString().padStart(2, '0');
   const fileName = `${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}.png`;
