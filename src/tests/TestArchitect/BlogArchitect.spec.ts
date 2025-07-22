@@ -39,7 +39,7 @@ test.describe('@Smoke @BlogData', () => {
         await blogPage.checkProtectedTitleDetailsText(BlogData.BlogArchitectDetails.protectedTitleDetailsText);
         await blogPage.checkProtectedDetailsText(BlogData.BlogArchitectDetails.protectedDetailsContent);
         await blogPage.checkEnterButtonExists();
-        await blogPage.checkEnterButtonExists();
+        await blogPage.clickEnterProtectHera();
         await SaveScreenshot(page);
     });
 });
