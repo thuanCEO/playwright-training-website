@@ -10,7 +10,7 @@ let context;
 let shopPagePage: ShopPage;
 let testArchitectPage: TestArchitectPage;
 
-test.describe('@Smoke @ShopProducts', () => {
+test.describe.parallel('@Smoke @ShopProducts', () => {
     test.beforeAll(async ({ browser }) => {
         context = await browser.newContext();
         page = await RegisterAccountTA(browser);
