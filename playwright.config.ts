@@ -1,12 +1,12 @@
 import { defineConfig } from '@playwright/test';
-
+import { TIMEOUT} from './src/config/constants';
 export default defineConfig({
   testDir: './src/tests',
-  timeout: 60 * 1000,
+  timeout: TIMEOUT.XLONG,
   retries: 0,
   workers: 1,
   expect: {
-    timeout: 5000,
+    timeout: TIMEOUT.DEFAULT,
   },
   reporter: [['html', { open: 'always' }]],
   use: {
