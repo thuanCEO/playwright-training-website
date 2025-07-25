@@ -13,16 +13,30 @@ export default defineConfig({
     browserName: 'chromium',
     channel: 'chrome',
     headless: false,
-    // viewport: { width: 1920, height: 1080 },
     ignoreHTTPSErrors: true,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'on-first-retry',
   },
-  // projects: [
-  //   {
-  //     name: 'chromium',
-  //     use: { browserName: 'chromium' },
-  //   },
-  // ],
+  projects: [
+    {
+      name: 'Chromium',
+      use: {
+        browserName: 'chromium',
+        channel: 'chrome',
+      },
+    },
+    {
+      name: 'Firefox',
+      use: {
+        browserName: 'firefox',
+      },
+    },
+    {
+      name: 'WebKit',
+      use: {
+        browserName: 'webkit',
+      },
+    },
+  ],
 });
