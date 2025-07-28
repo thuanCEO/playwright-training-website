@@ -1,5 +1,5 @@
 import { Page } from '@playwright/test';
-import { testArchitectUrl } from '../../utils/envConfig';
+import { testArchitectUrl } from '../../utils/EnvConfig';
 import { ArchitectLocators } from '../../locators/TestArchitect/TestArchitectPage.locator';
 import { ContactFormUs } from './ContactFormUs';
 import { ShopPage } from './ShopPage';
@@ -65,7 +65,7 @@ export class TestArchitectPage {
   async getTitle(): Promise<string> {
     return await this.page.title();
   }
-  
+
   async gotoAndClickLogin(): Promise<void> {
     await this.goto();
     await this.closePopupIfVisible();

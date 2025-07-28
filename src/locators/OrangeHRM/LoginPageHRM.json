@@ -1,0 +1,14 @@
+{
+    "uat_vi": {
+        "txtUsername": "//input[@id='username']",
+        "txtPassword": "//input[@id='password']"
+    },
+    "dev_en": {
+        "txtUsername": "//input[@id='username']",
+        "txtPassword": "//input[@id='password']"
+    },
+    "prod_vi": {
+        "txtUsername": "//input[@id='user-prod']",
+        "txtPassword": "//input[@id='pass-prod']"
+    }
+}

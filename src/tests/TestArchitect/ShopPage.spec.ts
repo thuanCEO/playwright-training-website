@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { TestArchitectPage } from '../../pages/TestArchitect/ArchitectPages';
 import { ShopPage } from '../../pages/TestArchitect/ShopPage';
-import { SaveScreenshot } from '../../utils/saveScreenshot';
+import { SaveScreenshot } from '../../utils/SaveScreenshot';
 import { RegisterAccountTA } from '../../helpers/TestSetup';
 import ShopPageTA from '../../data/TestArchitect/ShopPage.json';
 
@@ -55,7 +55,7 @@ test.describe.parallel('@Smoke @ShopProducts', () => {
             .checkProductReviewExists())
             .checkProductDescriptionExists())
             .fillReviewRandomDataInput();
-            
+
         await SaveScreenshot(page);
     });
 });

@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { TestArchitectPage } from '../../pages/TestArchitect/ArchitectPages';
 import { LoginPage } from '../../pages/TestArchitect/LoginPage';
-import { SaveScreenshot } from '../../utils/saveScreenshot';
+import { SaveScreenshot } from '../../utils/SaveScreenshot';
 
 test.describe('@Smoke @Register', () => {
   test('Login - register with email', async ({ page }) => {

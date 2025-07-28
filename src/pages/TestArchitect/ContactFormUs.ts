@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
-import { randomChar } from '../../utils/randomData';
+import { randomChar } from '../../utils/RandomData';
 import { ContactFormUS } from '../../locators/TestArchitect/ContactUS.locator';
-import { SaveScreenshot } from '../../utils/saveScreenshot';
+import { SaveScreenshot } from '../../utils/SaveScreenshot';
 
 export class ContactFormUs {
     private page: Page;
