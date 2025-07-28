@@ -1,42 +1,24 @@
 import { defineConfig } from '@playwright/test';
-import { TIMEOUT} from './src/config/constants';
+import { TIMEOUT, REPORTER } from './src/config/Constants';
+import { DRIVERS_CONFIG } from './src/config/DriverConfig'
+
 export default defineConfig({
-  testDir: './src/tests',
+  testDir: DRIVERS_CONFIG.testDir,
   timeout: TIMEOUT.XLONG,
-  retries: 0,
-  workers: 1,
+  retries: DRIVERS_CONFIG.retries,
+  workers: DRIVERS_CONFIG.workers,
   expect: {
     timeout: TIMEOUT.DEFAULT,
   },
-  reporter: [['html', { open: 'always' }]],
+  reporter: REPORTER.reporter,
+  name: DRIVERS_CONFIG.name,
   use: {
-    browserName: 'chromium',
-    channel: 'chrome',
-    headless: false,
-    ignoreHTTPSErrors: true,
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
-    trace: 'on-first-retry',
-  },
-  projects: [
-    {
-      name: 'Chromium',
-      use: {
-        browserName: 'chromium',
-        channel: 'chrome',
-      },
-    },
-    {
-      name: 'Firefox',
-      use: {
-        browserName: 'firefox',
-      },
-    },
-    {
-      name: 'WebKit',
-      use: {
-        browserName: 'webkit',
-      },
-    },
-  ],
+    browserName: DRIVERS_CONFIG.browserName,
+    channel: DRIVERS_CONFIG.channel,
+    headless: DRIVERS_CONFIG.headless,
+    ignoreHTTPSErrors: DRIVERS_CONFIG.ignoreHTTPSErrors,
+    screenshot: DRIVERS_CONFIG.screenshot,
+    video: DRIVERS_CONFIG.video,
+    trace: DRIVERS_CONFIG.trace,
+  }
 });

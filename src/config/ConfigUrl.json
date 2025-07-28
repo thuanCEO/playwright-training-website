@@ -1,0 +1,12 @@
+{
+    "dev_en": {
+        "testArchitectUrl": "https://demo.testarchitect.com/",
+        "orangeHrmUrl": "https://opensource-demo.orangehrmlive.com",
+        "apiUrl": "https://api.example.com"
+    },
+    "pro_en": {
+        "testArchitectUrl": "https://demo.testarchitect.com/",
+        "orangeHrmUrl": "https://opensource-demo.orangehrmlive.com",
+        "apiUrl": "https://api.example.com"
+    }
+}

@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { TestArchitectPage } from '../../pages/TestArchitect/ArchitectPages';
 import { BlogPage } from '../../pages/TestArchitect/BlogPage';
-import { SaveScreenshot } from '../../utils/saveScreenshot';
+import { SaveScreenshot } from '../../utils/SaveScreenshot';
 import { RegisterAccountTA } from '../../helpers/TestSetup';
 import BlogData from '../../data/TestArchitect/BlogPage.json';
 

@@ -2,9 +2,6 @@ import { Page } from '@playwright/test';
 import fs from 'fs';
 import path from 'path';
 
-/**
- * Lưu screenshot vào thư mục test-result/screenshot với tên file theo định dạng yyyymmdd hhmmsss.png
- */
 export async function SaveScreenshot(page: Page): Promise<string> {
   const now = new Date();
   const pad = (n: number) => n.toString().padStart(2, '0');

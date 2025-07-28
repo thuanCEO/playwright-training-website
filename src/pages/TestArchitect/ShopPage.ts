@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 import { ShopProductsPage } from '../../locators/TestArchitect/Shop.locator';
-import { randomChar } from '../../utils/randomData';
-import { SaveScreenshot } from '../../utils/saveScreenshot';
+import { randomChar } from '../../utils/RandomData';
+import { SaveScreenshot } from '../../utils/SaveScreenshot';
 
 export class ShopPage {
   private page: Page;

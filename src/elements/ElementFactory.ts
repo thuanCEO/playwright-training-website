@@ -1,5 +1,5 @@
 import { Page, Locator, expect } from '@playwright/test';
-import { TIMEOUT } from '../config/constants';
+import { TIMEOUT } from '../config/Constants';
 import { ElementAction } from './ElementAction';
 import { TemplateXpath, TemplateFormat } from '../helpers/TemplateHelpers'
 
