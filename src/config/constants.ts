@@ -21,3 +21,7 @@ export const PLATFORM = {
   language: process.env.LANG as LanguageEnum || LanguageEnum.EN,
   browser: (process.env.BROWSER as BrowserEnum) || BrowserEnum.CHROMIUM,
 };
+
+export const PROJECT = {
+  Project: 'OrangeHRM'
+};

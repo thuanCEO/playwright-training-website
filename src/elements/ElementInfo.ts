@@ -1,6 +1,6 @@
 import { Page, Locator, expect } from '@playwright/test';
 import { IElementInfo } from '../interfaces/IElementInfo.interfaces';
-import { TIMEOUT } from '../config/constants';
+import { TIMEOUT } from '../config/Constants';
 
 export class ElementInfo implements IElementInfo {
     constructor(private page: Page) { }
