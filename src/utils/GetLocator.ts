@@ -15,8 +15,6 @@ export class GetLocator {
         const fileName = `${pageName}.json`;
         const startDir = path.resolve(__dirname, '../locators');
         const filePath = this.findFileRecursive(startDir, fileName);
-        console.log(`[DEBUG] Looking for file: ${fileName}`);
-        console.log(`[DEBUG] Base dir: ${startDir}`);
 
         if (!filePath) {
             throw new Error(`File locator not found (not found recursively): ${fileName}`);

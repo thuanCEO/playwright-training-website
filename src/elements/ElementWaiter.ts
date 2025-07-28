@@ -1,11 +1,11 @@
 import { expect, Locator, Page } from '@playwright/test';
 import { IWaiter } from '../interfaces/IWaiter.interfaces';
-import { TIMEOUT } from '../config/constants';
+import { TIMEOUT } from '../config/Constants';
 
 export class ElementWaiter implements IWaiter {
   private defaultTimeout = TIMEOUT.DEFAULT;
 
-  constructor(private page: Page) {}
+  constructor(private page: Page) { }
 
   // ------------------ PAGE LEVEL ------------------
 

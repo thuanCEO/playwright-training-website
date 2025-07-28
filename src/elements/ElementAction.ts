@@ -1,6 +1,6 @@
 import { Locator, expect } from '@playwright/test';
 import { IElementAction } from '../interfaces/IElementAction.interfaces';
-import { TIMEOUT } from '../config/constants';
+import { TIMEOUT } from '../config/Constants';
 
 export class ElementAction implements IElementAction {
     private defaultTimeout = TIMEOUT.DEFAULT;
