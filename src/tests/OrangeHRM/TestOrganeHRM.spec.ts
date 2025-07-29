@@ -1,25 +1,22 @@
-import { test, BrowserContext, Page, expect } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import { LoginPageHRM } from '../../pages/OrangeHRM/LoginPageHRM';
 import { UserData } from '../../data/OrangeHRM/UserData'
 import { GetLocator } from '../../utils/GetLocator';
 import { DataLoader } from '../../utils/DataLoader'
 import { PROJECT } from '../../config/Constants'
-import { SaveScreenshot } from '../../utils/SaveScreenshot';
 
-let context: BrowserContext;
-let page: Page;
+let page;
+let context;
 let loginPageHRM: LoginPageHRM;
 
-test.describe.parallel('@Smoke @LoginPageHRM', () => {
+test.describe.parallel('@Smoke', () => {
     test.beforeAll(async ({ browser }, projectInfo) => {
         context = await browser.newContext();
-        page = await context.newPage();
-
         const filePath = projectInfo.file;
         if (filePath.includes('OrangeHRM')) {
             PROJECT.Project = 'OrangeHRM';
         }
-
+        const page = await context.newPage();
         loginPageHRM = new LoginPageHRM(page);
     });
 
@@ -27,14 +24,19 @@ test.describe.parallel('@Smoke @LoginPageHRM', () => {
         await context.close();
     });
 
-    test('Login Page OrangeHRM', async ({ page }) => {
-        const userData = UserData.loadAndGetUser('LoginData.json', 'admin');
+    test('LoginPageHRM ', async ({ page }) => {
+        const loginPage = new LoginPageHRM(page);
+        await loginPage.goto();
+        const rawData = DataLoader.loadFileName('LoginData.json');
+        UserData.initialize(rawData);
+        console.log('rawData:', rawData);
 
-        (await (await (await loginPageHRM.goto())
-            .enterUserName(userData.username))
-            .enterPassword(userData.password))
-            .clickButtonLogin();
 
-        await SaveScreenshot(page);
+        const admin = UserData.loadAndGetUser('LoginData.json', 'admin');
+        console.log(admin.username);
+        console.log(admin.password);
     });
+
+
+
 });

@@ -1,14 +1,17 @@
 {
     "uat_vi": {
-        "txtUsername": "//input[@id='username']",
-        "txtPassword": "//input[@id='password']"
+        "usernameInput": "//div//input[@name='username']",
+        "passwordInput": "//div//input[@name='password']",
+        "loginButton": "//div//button[@type='submit']"
     },
     "dev_en": {
-        "txtUsername": "//input[@id='username']",
-        "txtPassword": "//input[@id='password']"
+        "usernameInput": "//div//input[@name='username']",
+        "passwordInput": "//div//input[@name='password']",
+        "loginButton": "//div//button[@type='submit']"
     },
     "prod_vi": {
-        "txtUsername": "//input[@id='user-prod']",
-        "txtPassword": "//input[@id='pass-prod']"
+        "usernameInput": "//div//input[@name='username']",
+        "passwordInput": "//div//input[@name='password']",
+        "loginButton": "//div//button[@type='submit']"
     }
 }
