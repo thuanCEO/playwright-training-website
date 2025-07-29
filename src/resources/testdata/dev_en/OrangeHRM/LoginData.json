@@ -1,6 +1,6 @@
 {
     "admin": {
-        "username": "AdminUser",
-        "password": "123456"
+        "username": "Admin",
+        "password": "admin123"
     }
 }
