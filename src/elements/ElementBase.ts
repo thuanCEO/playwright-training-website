@@ -8,7 +8,7 @@ export class ElementBase {
 
     constructor(page: Page) {
         this.page = page;
-        this.factory = new ElementFactory(page);
+        this.factory = new ElementFactory(this.page);
     }
 
 

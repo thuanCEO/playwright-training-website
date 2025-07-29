@@ -5,6 +5,9 @@
   "scripts": {
     "test": "playwright test",
     "report": "playwright show-report",
+    "ccbTest": "npx cucumber-js",
+    "test:cucumber": "cucumber-js --require-module ts-node/register --require src/step-definitions/**/*.ts",
+    "tsCucumber": "npx cucumber-js --require-module ts-node/register --require src/step-definitions/**/*.ts src/features/",
     "test:report": "playwright test && playwright show-report",
     "start": "playwright test && playwright show-report"
   },
@@ -16,6 +19,9 @@
     "@playwright/test": "^1.54.1"
   },
   "devDependencies": {
-    "@types/node": "^24.0.15"
+    "@cucumber/cucumber": "^12.1.0",
+    "@types/node": "^24.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }

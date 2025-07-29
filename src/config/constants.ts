@@ -1,7 +1,7 @@
 import type { ReporterDescription } from '@playwright/test';
-import { LanguageEnum } from '../enums/LanguageEnum.js';
-import { EnvironmentEnum } from '../enums/EnvironmentEnum.js';
-import { BrowserEnum } from '../enums/BrowserEnum.js';
+import { LanguageEnum } from '../enums/LanguageEnum';
+import { EnvironmentEnum } from '../enums/EnvironmentEnum';
+import { BrowserEnum } from '../enums/BrowserEnum';
 
 export const TIMEOUT = {
   DEFAULT: 5000,
